@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4145EBE3-0A37-4150-8B11-D5E2B064D638}|PrintManagement.Application\\PrintManagement.Application.csproj|c:\\users\\admin\\desktop\\projectprintmanagement\\printmanagementwebapi\\printmanagement.application\\payloads\\responsemodels\\datarole\\dataresponserole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4145EBE3-0A37-4150-8B11-D5E2B064D638}|PrintManagement.Application\\PrintManagement.Application.csproj|solutionrelative:printmanagement.application\\payloads\\responsemodels\\datarole\\dataresponserole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4145EBE3-0A37-4150-8B11-D5E2B064D638}|PrintManagement.Application\\PrintManagement.Application.csproj|c:\\users\\admin\\desktop\\projectprintmanagement\\printmanagementwebapi\\printmanagement.application\\implementservices\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4145EBE3-0A37-4150-8B11-D5E2B064D638}|PrintManagement.Application\\PrintManagement.Application.csproj|solutionrelative:printmanagement.application\\implementservices\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4145EBE3-0A37-4150-8B11-D5E2B064D638}|PrintManagement.Application\\PrintManagement.Application.csproj|c:\\users\\admin\\desktop\\projectprintmanagement\\printmanagementwebapi\\printmanagement.application\\interfaceservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4145EBE3-0A37-4150-8B11-D5E2B064D638}|PrintManagement.Application\\PrintManagement.Application.csproj|solutionrelative:printmanagement.application\\interfaceservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41F309AE-DBE1-426D-98F7-6B6B34ABEA8A}|PrintManagement.Domain\\PrintManagement.Domain.csproj|c:\\users\\admin\\desktop\\projectprintmanagement\\printmanagementwebapi\\printmanagement.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41F309AE-DBE1-426D-98F7-6B6B34ABEA8A}|PrintManagement.Domain\\PrintManagement.Domain.csproj|solutionrelative:printmanagement.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3446F61B-F070-4DD3-B76B-7F8063E5DC02}|PrintManagement.Infrastructure\\PrintManagement.Infrastructure.csproj|c:\\users\\admin\\desktop\\projectprintmanagement\\printmanagementwebapi\\printmanagement.infrastructure\\implementrepositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3446F61B-F070-4DD3-B76B-7F8063E5DC02}|PrintManagement.Infrastructure\\PrintManagement.Infrastructure.csproj|solutionrelative:printmanagement.infrastructure\\implementrepositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41F309AE-DBE1-426D-98F7-6B6B34ABEA8A}|PrintManagement.Domain\\PrintManagement.Domain.csproj|c:\\users\\admin\\desktop\\projectprintmanagement\\printmanagementwebapi\\printmanagement.domain\\interfacerepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41F309AE-DBE1-426D-98F7-6B6B34ABEA8A}|PrintManagement.Domain\\PrintManagement.Domain.csproj|solutionrelative:printmanagement.domain\\interfacerepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CCBA686-BA34-4A95-8187-FC685AEEC2EB}|PrintManagement\\PrintManagement.csproj|c:\\users\\admin\\desktop\\projectprintmanagement\\printmanagementwebapi\\printmanagement\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CCBA686-BA34-4A95-8187-FC685AEEC2EB}|PrintManagement\\PrintManagement.csproj|solutionrelative:printmanagement\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 171,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Domain\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "PrintManagement.Domain\\Entities\\Role.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Domain\\Entities\\Role.cs",
+              "RelativeToolTip": "PrintManagement.Domain\\Entities\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T19:15:26.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataResponseRole.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Application\\Payloads\\ResponseModels\\DataRole\\DataResponseRole.cs",
+              "RelativeDocumentMoniker": "PrintManagement.Application\\Payloads\\ResponseModels\\DataRole\\DataResponseRole.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Application\\Payloads\\ResponseModels\\DataRole\\DataResponseRole.cs",
+              "RelativeToolTip": "PrintManagement.Application\\Payloads\\ResponseModels\\DataRole\\DataResponseRole.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T19:15:23.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Application\\ImplementServices\\UserService.cs",
+              "RelativeDocumentMoniker": "PrintManagement.Application\\ImplementServices\\UserService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Application\\ImplementServices\\UserService.cs",
+              "RelativeToolTip": "PrintManagement.Application\\ImplementServices\\UserService.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAAHIBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T17:18:01.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Application\\InterfaceServices\\IUserService.cs",
+              "RelativeDocumentMoniker": "PrintManagement.Application\\InterfaceServices\\IUserService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Application\\InterfaceServices\\IUserService.cs",
+              "RelativeToolTip": "PrintManagement.Application\\InterfaceServices\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T17:18:00.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Infrastructure\\ImplementRepositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "PrintManagement.Infrastructure\\ImplementRepositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Infrastructure\\ImplementRepositories\\UserRepository.cs",
+              "RelativeToolTip": "PrintManagement.Infrastructure\\ImplementRepositories\\UserRepository.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAjwDEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T17:13:36.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Domain\\InterfaceRepositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "PrintManagement.Domain\\InterfaceRepositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement.Domain\\InterfaceRepositories\\IUserRepository.cs",
+              "RelativeToolTip": "PrintManagement.Domain\\InterfaceRepositories\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T17:13:32.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "PrintManagement\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\ProjectPrintManagement\\PrintManagementWebApi\\PrintManagement\\Controllers\\UserController.cs",
+              "RelativeToolTip": "PrintManagement\\Controllers\\UserController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T17:12:40.726Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
