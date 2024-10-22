@@ -31,6 +31,7 @@
   <ItemGroup>
     <Folder Include="Upload\Design\" />
     <Folder Include="Upload\Resources\" />
+    <Folder Include="Upload\Resources\" />
     <Folder Include="Upload\ResourcePropertyDetail\" />
   </ItemGroup>
 

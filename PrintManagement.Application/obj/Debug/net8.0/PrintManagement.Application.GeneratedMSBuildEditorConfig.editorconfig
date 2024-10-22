@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PrintManagement.Application
-build_property.ProjectDir = C:\Users\ADMIN\Desktop\ProjectPrintManagement\PrintManagementWebApi\PrintManagement.Application\
+build_property.ProjectDir = C:\Users\PC_01\source\repos\PrintManagementWebApi\PrintManagementApi\PrintManagement.Application\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -8,6 +8,7 @@ using PrintManagement.Application.Payloads.ResponseModels.DataCustomer;
 using PrintManagement.Application.Payloads.ResponseModels.DataProject;
 using PrintManagement.Application.Payloads.Responses;
 using PrintManagement.Constants;
+using PrintManagement.Domain.Entities;
 
 namespace PrintManagement.Controllers
 {
@@ -30,9 +31,9 @@ namespace PrintManagement.Controllers
             return Ok(await _projectService.CreateProject(id, request));
         }
         [HttpGet]
-        public async Task<IActionResult> GetAllProject([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+        public async Task<IActionResult> GetAllProject(string? projectName, PStatus? status, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
         {
-            return Ok(await _projectService.GetAllProject(pageNumber, pageSize));
+            return Ok(await _projectService.GetAllProject(projectName, status, pageNumber, pageSize));
         }
         [HttpGet]
         public async Task<IActionResult> GetAllIdNameCustomer()

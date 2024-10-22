@@ -94,7 +94,18 @@ namespace PrintManagement.Infrastructure.ImplementRepositories
             }
             return roles.AsEnumerable();
         }
+        public async Task<IEnumerable<Role>> GetRolesOfUser(User user)
+        {
+            var roles = new List<Role>();
+            var listRoles = _context.Permissions.Where(x => x.UserId == user.Id).AsQueryable();
+            foreach (var item in listRoles.Distinct())
+            {
+                var role = _context.Roles.SingleOrDefault(x => x.Id == item.RoleId);
+                roles.Add(role);
+            }
 
+            return roles.AsEnumerable();
+        }
         public async Task<User> GetUserByEmail(string email)
         {
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Email.ToLower().Equals(email.ToLower()));
@@ -165,5 +176,17 @@ namespace PrintManagement.Infrastructure.ImplementRepositories
             });
             return response;
         }
+
+        public async Task<IEnumerable<User>> GetAllUser(string? userName)
+        {
+            var query = _context.Users.AsQueryable();
+            if (!string.IsNullOrEmpty(userName))
+            {
+                query = query.Where(u => u.UserName.Contains(userName));
+            }
+
+            return await query.ToListAsync();
+        }
+
     }
 }

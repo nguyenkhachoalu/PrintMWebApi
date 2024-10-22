@@ -11,7 +11,7 @@ namespace PrintManagement.Application.InterfaceServices
 {
     public interface ITeamService
     {
-        Task<ResponsePagedResult<DataResponseTeam>> GetAllTeams(int pageNumber, int pageSize);
+        Task<ResponsePagedResult<DataResponseTeam>> GetAllTeams(string? teamName, int pageNumber, int pageSize);
         Task<ResponseObject<IEnumerable<ResponseDepartments>>> getDepartments();
         Task<ResponseObject<DataResponseTeam>> GetTeamById(int id);
         Task<ResponseObject<DataResponseTeam>> UpdateTeam(int id, Request_Team request);

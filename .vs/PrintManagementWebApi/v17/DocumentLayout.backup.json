@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC_01\\source\\repos\\PrintManagementWebApi\\PrintManagementApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4145EBE3-0A37-4150-8B11-D5E2B064D638}|PrintManagement.Application\\PrintManagement.Application.csproj|c:\\users\\pc_01\\source\\repos\\printmanagementwebapi\\printmanagementapi\\printmanagement.application\\implementservices\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4145EBE3-0A37-4150-8B11-D5E2B064D638}|PrintManagement.Application\\PrintManagement.Application.csproj|solutionrelative:printmanagement.application\\implementservices\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3446F61B-F070-4DD3-B76B-7F8063E5DC02}|PrintManagement.Infrastructure\\PrintManagement.Infrastructure.csproj|c:\\users\\pc_01\\source\\repos\\printmanagementwebapi\\printmanagementapi\\printmanagement.infrastructure\\implementrepositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3446F61B-F070-4DD3-B76B-7F8063E5DC02}|PrintManagement.Infrastructure\\PrintManagement.Infrastructure.csproj|solutionrelative:printmanagement.infrastructure\\implementrepositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 171,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PC_01\\source\\repos\\PrintManagementWebApi\\PrintManagementApi\\PrintManagement.Infrastructure\\ImplementRepositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "PrintManagement.Infrastructure\\ImplementRepositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\PC_01\\source\\repos\\PrintManagementWebApi\\PrintManagementApi\\PrintManagement.Infrastructure\\ImplementRepositories\\UserRepository.cs",
+              "RelativeToolTip": "PrintManagement.Infrastructure\\ImplementRepositories\\UserRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wFUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T05:20:42.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\PC_01\\source\\repos\\PrintManagementWebApi\\PrintManagementApi\\PrintManagement.Application\\ImplementServices\\UserService.cs",
+              "RelativeDocumentMoniker": "PrintManagement.Application\\ImplementServices\\UserService.cs",
+              "ToolTip": "C:\\Users\\PC_01\\source\\repos\\PrintManagementWebApi\\PrintManagementApi\\PrintManagement.Application\\ImplementServices\\UserService.cs",
+              "RelativeToolTip": "PrintManagement.Application\\ImplementServices\\UserService.cs",
+              "ViewState": "AgIAAFEBAAAAAAAAAAAcwG0BAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T05:16:23.158Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

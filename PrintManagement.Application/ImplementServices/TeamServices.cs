@@ -138,11 +138,11 @@ namespace PrintManagement.Application.ImplementServices
 
         }
 
-        public async Task<ResponsePagedResult<DataResponseTeam>> GetAllTeams(int pageNumber, int pageSize)
+        public async Task<ResponsePagedResult<DataResponseTeam>> GetAllTeams(string? teamName, int pageNumber, int pageSize)
         {
             try
             {
-                var teams = await _baseTeamRepository.GetAllAsync();
+                var teams = await _teamRepository.GetAllTeamsAsync(teamName);
                 var responseTeam = teams.Select(t => _teamConverter.EntitytoDTO(t)).ToPagedList(pageNumber, pageSize);
                 return new ResponsePagedResult<DataResponseTeam>
                 {

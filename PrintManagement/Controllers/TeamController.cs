@@ -23,9 +23,9 @@ namespace PrintManagement.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllTeams([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+        public async Task<IActionResult> GetAllTeams(string? teamName, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
         {
-            return Ok(await _teamService.GetAllTeams(pageNumber, pageSize));
+            return Ok(await _teamService.GetAllTeams(teamName, pageNumber, pageSize));
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetTeamById(int id)

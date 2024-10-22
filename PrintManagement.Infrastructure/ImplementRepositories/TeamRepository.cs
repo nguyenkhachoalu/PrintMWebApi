@@ -19,6 +19,17 @@ namespace PrintManagement.Infrastructure.ImplementRepositories
             _context = context;
         }
 
+        public async Task<IEnumerable<Team>> GetAllTeamsAsync(string? teamName)
+        {
+            var query = _context.Teams.AsQueryable();
+            if (!string.IsNullOrEmpty(teamName))
+            {
+                query = query.Where(u => u.Name.Contains(teamName));
+            }
+
+            return await query.ToListAsync();
+        }
+
         public async Task<int> GetNumberOfMembersInTeamAsync(int teamId)
         {
             return await _context.Users.CountAsync(u => u.TeamId == teamId);

@@ -12,5 +12,7 @@ namespace PrintManagement.Domain.InterfaceRepositories
         Task<Team> GetTeamByName(string Name);
         Task<int> GetNumberOfMembersInTeamAsync(int teamId);
         Task<Team> GetTeamByManager(int managerId);
+        Task<IEnumerable<Team>> GetAllTeamsAsync(string? teamName);
+
     }
 }

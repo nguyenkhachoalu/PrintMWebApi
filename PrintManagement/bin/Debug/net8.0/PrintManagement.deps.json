@@ -980,12 +980,18 @@
           "X.PagedList": "10.2.1"
         },
         "runtime": {
-          "PrintManagement.Application.dll": {}
+          "PrintManagement.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "PrintManagement.Domain/1.0.0": {
         "runtime": {
-          "PrintManagement.Domain.dll": {}
+          "PrintManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "PrintManagement.Infrastructure/1.0.0": {
@@ -995,7 +1001,10 @@
           "PrintManagement.Domain": "1.0.0"
         },
         "runtime": {
-          "PrintManagement.Infrastructure.dll": {}
+          "PrintManagement.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

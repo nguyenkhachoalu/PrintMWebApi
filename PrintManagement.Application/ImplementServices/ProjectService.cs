@@ -27,8 +27,9 @@ namespace PrintManagement.Application.ImplementServices
         private readonly ICustomerRepository _customerRepository;
         private readonly ProjectConverter _projectConverter;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IProjectRepository _projectRepository;
 
-        public ProjectService(IBaseRepository<Project> baseProjectRepository, IBaseRepository<User> baseUserRepository, IBaseRepository<Team> baseTeamRepository, IUserRepository userRepository, ICustomerRepository customerRepository, ProjectConverter projectConverter, IHttpContextAccessor httpContextAccessor)
+        public ProjectService(IBaseRepository<Project> baseProjectRepository, IBaseRepository<User> baseUserRepository, IBaseRepository<Team> baseTeamRepository, IUserRepository userRepository, ICustomerRepository customerRepository, ProjectConverter projectConverter, IHttpContextAccessor httpContextAccessor, IProjectRepository projectRepository)
         {
             _baseProjectRepository = baseProjectRepository;
             _baseUserRepository = baseUserRepository;
@@ -37,6 +38,7 @@ namespace PrintManagement.Application.ImplementServices
             _customerRepository = customerRepository;
             _projectConverter = projectConverter;
             _httpContextAccessor = httpContextAccessor;
+            _projectRepository = projectRepository;
         }
 
         public async Task<ResponseObject<DataResponseProject>> CreateProject(int idUser, Request_CreateProject request)
@@ -151,11 +153,11 @@ namespace PrintManagement.Application.ImplementServices
             return response;
         }
 
-        public async Task<ResponsePagedResult<DataResponseProject>> GetAllProject(int pageNumber, int pageSize)
+        public async Task<ResponsePagedResult<DataResponseProject>> GetAllProject(string? projectName, PStatus? status, int pageNumber, int pageSize)
         {
             try
             {
-                var projects = await _baseProjectRepository.GetAllAsync();
+                var projects = await _projectRepository.GetAllProjectAsync(projectName, status);
                 var hostUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}";
 
                 // Thay đổi quá trình mapping để thêm URL đầy đủ cho avatar

@@ -18,5 +18,7 @@ namespace PrintManagement.Domain.InterfaceRepositories
         Task<bool> IsUserInDesignTeamAsync(int userId);
         Task<IEnumerable<Notification>> GetNotificationByUserId(int userId);
         Task<IEnumerable<Permissions>> GetPermissionsByUserId(int id);
+        Task<IEnumerable<Role>> GetRolesOfUser(User user);
+        Task<IEnumerable<User>> GetAllUser(string? userName);
     }
 }

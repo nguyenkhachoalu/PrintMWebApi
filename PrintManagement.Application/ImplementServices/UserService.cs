@@ -48,11 +48,11 @@ namespace PrintManagement.Application.ImplementServices
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<ResponsePagedResult<DataResponseUser>> GetAllUsers(int pageNumber, int pageSize)
+        public async Task<ResponsePagedResult<DataResponseUser>> GetAllUsers(string? userName, int pageNumber, int pageSize)
         {
             try
             {
-                var users = await _baseUserRepository.GetAllAsync();
+                var users = await _userRepository.GetAllUser(userName);
                 var hostUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}";
 
                 // Thay đổi quá trình mapping để thêm URL đầy đủ cho avatar
@@ -80,8 +80,9 @@ namespace PrintManagement.Application.ImplementServices
                     PageSize = pageSize
                 };
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+
                 return new ResponsePagedResult<DataResponseUser>
                 {
                     Items = null,
@@ -173,10 +174,6 @@ namespace PrintManagement.Application.ImplementServices
             };
         }
 
-        public Task<ResponseObject<DataResponseUser>> UpdateProfile(int id, Request_UpdateUser request)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<ResponseObject<DataResponseUser>> UpdateTeamUser(int id, int teamId)
         {
@@ -203,8 +200,8 @@ namespace PrintManagement.Application.ImplementServices
                     };
                 }
                 user.TeamId = teamId;
-                team.NumberOfMember = await _teamRepository.GetNumberOfMembersInTeamAsync(teamId);
                 await _baseUserRepository.UpdateAsync(user);
+                team.NumberOfMember = await _teamRepository.GetNumberOfMembersInTeamAsync(teamId);
                 await _baseTeamRepository.UpdateAsync(team);
                 return new ResponseObject<DataResponseUser>
                 {
@@ -224,7 +221,7 @@ namespace PrintManagement.Application.ImplementServices
             }
         }
 
-        public async Task<ResponseObject<DataResponseUser>> UpdateUser(int id, Request_UpdateUser request)
+        public async Task<ResponseObject<DataResponseUser>> UpdateProfile(int id, Request_UpdateUser request)
         {
             try
             {
@@ -311,7 +308,34 @@ namespace PrintManagement.Application.ImplementServices
                 Data = null,
             };
         }
-
+        public async Task<ResponseObject<IEnumerable<DataResponseRole>>> GetRoleOfUser(int idUser)
+        {
+            var user = await _baseUserRepository.GetByIdAsync(idUser);
+            if (user == null)
+            {
+                return new ResponseObject<IEnumerable<DataResponseRole>>
+                {
+                    Status = StatusCodes.Status401Unauthorized,
+                    Message = "người dùng không tồn tại",
+                    Data = null,
+                };
+            }
+            var rolesOfUser = await _userRepository.GetRolesOfUser(user);
+            var response = rolesOfUser.Select(x => new DataResponseRole
+            {
+                Id = x.Id,
+                RoleName = x.RoleName,
+                RoleCode = x.RoleCode,
+                IsActive = x.IsActive,
+                
+            }).ToList();
+            return new ResponseObject<IEnumerable<DataResponseRole>>
+            {
+                Status = StatusCodes.Status200OK,
+                Message = "Lấy danh sách thành công",
+                Data = response,
+            };
+        }
         public async Task<ResponseObject<string>> UpdateRoleOfUser(int id, List<string> roleCode)
         {
             try
@@ -326,6 +350,28 @@ namespace PrintManagement.Application.ImplementServices
                         Data = null,
                     };
                 }
+                var roles = await _userRepository.GetRolesOfUserAsync(user);
+                var team = await _teamRepository.GetTeamByManager(user.Id);
+                if(team != null && !roleCode.Contains("Manager"))
+                {
+                        return new ResponseObject<string>
+                        {
+                            Status = StatusCodes.Status400BadRequest,
+                            Message = $"Người này đang là trưởng phòng của Phòng {team.Name}.",
+                            Data = null,
+                        };
+                }
+                bool isAdmin = roles.Any(r => r == "Admin");
+                if (isAdmin && !roleCode.Contains("Admin"))
+                {
+                    return new ResponseObject<string>
+                    {
+                        Status = StatusCodes.Status400BadRequest,
+                        Message = "Bạn không có quyền xóa quyền Admin.",
+                        Data = null,
+                    };
+                }
+
                 var permissions = await _userRepository.GetPermissionsByUserId(user.Id);
 
                 if (permissions != null && permissions.Any())
@@ -335,7 +381,7 @@ namespace PrintManagement.Application.ImplementServices
                 await _userRepository.AddRolesToUserAsync(user, roleCode);
                 return new ResponseObject<string>
                 {
-                    Status = StatusCodes.Status400BadRequest,
+                    Status = StatusCodes.Status200OK,
                     Message = "Thêm quyền thành công",
                     Data = null,
                 };

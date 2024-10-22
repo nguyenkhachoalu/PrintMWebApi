@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using PrintManagement.Application.InterfaceServices;
 using PrintManagement.Application.Payloads.RequestModels.UserRequest;
 using PrintManagement.Application.Payloads.ResponseModels.DataNotification;
+using PrintManagement.Application.Payloads.ResponseModels.DataRole;
 using PrintManagement.Application.Payloads.ResponseModels.DataUsers;
 using PrintManagement.Application.Payloads.Responses;
 using PrintManagement.Constants;
@@ -24,9 +25,9 @@ namespace PrintManagement.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllUsers([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+        public async Task<IActionResult> GetAllUsers(string? userName, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
         {
-            return  Ok(await _userService.GetAllUsers(pageNumber, pageSize));
+            return  Ok(await _userService.GetAllUsers(userName,pageNumber, pageSize));
         }
         [HttpGet]
         public async Task<IActionResult> GetUsersWithRoleManagers()
@@ -35,7 +36,7 @@ namespace PrintManagement.Controllers
         }
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] // xac thuc bang json web token
         [HttpPut]
-        public async Task<IActionResult> UpdateProfile([FromBody] Request_UpdateUser request)
+        public async Task<IActionResult> UpdateProfile([FromForm] Request_UpdateUser request)
         {
             int id = int.Parse(HttpContext.User.FindFirst("Id").Value);
             return Ok(await _userService.UpdateProfile(id,request));
@@ -58,6 +59,22 @@ namespace PrintManagement.Controllers
         public async Task<IActionResult> UpdateIsSeenNotification(int id)
         {
             return Ok(await _userService.UpdateIsSeenNotification(id));
+        }
+        [HttpPut]
+        [Authorize(Policy = "AdminOnly")]
+        public async Task<IActionResult> UpdateRoleOfUser(int id,[FromBody]List<string> roleCode)
+        {
+            return Ok(await _userService.UpdateRoleOfUser(id, roleCode));
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetRoleOfUser(int idUser)
+        {
+            return Ok(await _userService.GetRoleOfUser(idUser));
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAllRole()
+        {
+            return Ok(await _userService.GetAllRole());
         }
     }
 }

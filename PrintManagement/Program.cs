@@ -105,6 +105,7 @@ builder.Services.AddScoped<IBaseRepository<ResourcePropertyDetail>, BaseReposito
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ITeamRepository, TeamRepository>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IDesignRepository, DesignRepository>();
 builder.Services.AddScoped<IResourcesRepository, ResourcesRepository>();
